@@ -3,7 +3,11 @@ import React from 'react';
 class App extends React.Component {
   render() {
     return(<div>
-      Github Card
+      <h1> Github Info</h1>
+      <form>
+        <input placeholder='github handle'/>
+        <button>Search</button>
+      </form>
     </div>);
   }
 }
