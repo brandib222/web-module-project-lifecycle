@@ -2,13 +2,18 @@
 import React from 'react';
 
 class User extends React.Component {
+    
     render () {
+
+        const { user } = this.props;
+        console.log(user);
+
         return (<div className='user-info'>
-        <img src='https://avatars.githubusercontent.com/u/91443920?v=4' />
-            <a target='_blank' href='https://github.com/brandib222'> <h3>Brandi Ball</h3> </a>
-            <p>(brandib222)</p>
-            <p>Total Repos: 41</p>
-            <p>Total Followers: 6</p>
+        <img src={user.avatar_url}/>
+            <a target='_blank' href={user.html_url}> <h3>{user.name}</h3> </a>
+            <p>({user.login})</p>
+            <p>Total Repos: {user.public_repos}</p>
+            <p>Total Followers: {user.followers}</p>
         </div>);
     }
 }
